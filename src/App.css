@@ -1,38 +1,124 @@
 .App {
-  text-align: center;
+    background-color: ghostwhite;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+    background-color: rgba(1, 1, 100, .1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.chatbox{
+    display: flex;
+    padding: 1rem;
+    background-color: rgba(1, 1, 100, .6);
+    color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.msg-container {
+    display: flex;
+    flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.chatbox2 {
+    display: flex;
+    align-self: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+    background-color: rgba(1, 1, 100, .5);
+    color: white;
+    border-radius: 3rem;
+    margin: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chatbox1 {
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+    padding: 1rem;
+    background-color: rgba(1, 1, 100, .3);
+    color: white;
+    border-radius: 3rem;
+    margin: 1rem;
+}
+
+.msg {
+    /*padding-bottom: -1.5rem;*/
+    /*margin-bottom: -.1rem;*/
+}
+
+.msg-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.byline {
+    padding-top: -1rem;
+    font-size: .8rem;
+}
+
+.pic {
+    width: 3rem;
+    border-radius: 50rem;
+    margin: .5rem;
+}
+
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.input-form {
+    width: 20rem;
+    border-radius: .5rem;
+    padding: .6rem;
+    margin: 1rem;
+    background-color: rgba(1, 1, 100, .4);
+    color: white;
+    font-size: 1rem;
+}
+
+.label {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bold;
+}
+
+.btn {
+    width: 15rem;
+    background-color: rgba(1, 1, 100, .6);
+    color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.btn:hover {
+    color: rgba(1, 1, 100, .6);
+    background-color: white;
+}
+
+.message-txt {
+    height: 3rem;
+    margin: 1rem 3rem;
+    border-radius: .5rem;
+}
+
+.msg-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.msg-btn {
+    width: 20rem;
+    margin: 0 auto;
+    padding: .5rem;
+    border-radius: 1rem;
+    background-color: rgba(1, 1, 100, .6);
+    color: white;
+}
+
+.msg-btn:hover {
+    color: rgba(1, 1, 100, .6);
+    background-color: white;
 }
