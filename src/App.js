@@ -23,7 +23,7 @@ function App() {
                 THE :id IS THE LOGGED IN USER
                 THE :room_name IS THE ROOM THE USER IS JOINING
              */}
-            <Route exact path='/chatapp/:id/:room_name' component={ChatApp} />
+            <Route exact path='/chatapp/:id/:room_name/:room_id' component={ChatApp} />
         </div>
     )
 }
