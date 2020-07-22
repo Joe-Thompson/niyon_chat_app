@@ -7,13 +7,13 @@ import niyon from './imgs/niyon-black-s.png';
 import Axios from "axios";
 
 
-let endPoint  = " https://niyon-be-chat.herokuapp.com/";
-let socket = io.connect(`${endPoint}`);
+// let endPoint  = "https://niyon-be-chat.herokuapp.com/";
+let socket = io.connect("/");
 
-const App = ({ match }) => {
+const ChatApp = ({ match }) => {
     const id = match.params.id // GRABBING THE USER ID FROM THE URL
     const room_name = match.params.room_name // GRABBING THE ROOM NAME FROM THE URL
-    const room_id = match.params.room_id
+    const room_id = match.params.room_id;    
     // data - IS SENT ON JOIN TO THE SERVER TO GET THE USER AND ROOM INFORMATION
     const data = {
         id: Number(id),
@@ -47,7 +47,7 @@ const App = ({ match }) => {
     }, [data])
     // API CALL TO THE SERVER TO GET THE CHAT HISTORY
     useEffect(() => {
-        Axios.get(' https://niyon-be-chat.herokuapp.com/chathistory', {
+        Axios.get('/chathistory', {
             params: {
                 room_name: data.room_name
             }
@@ -176,4 +176,4 @@ if (chatHistory === null) {
         );
     }
 
-export default App;
+export default ChatApp;
